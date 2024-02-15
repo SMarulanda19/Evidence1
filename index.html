@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence 1</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="div_logo_medium"><img class="article-image_medium" src="img/Medium.png" alt="Medium"></div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+            <button>Buscar</button>
+        </div>
+        <div class="user-icon">👤</div>
+    </header>
+    <article>
+        <div class="main-container">
+            <h1 class="article-title">React & Javascript Optimization Techniques</h1>
+            <img class="article-image" src="img/pc_2.jpg" alt="Imagen del artículo">
+        </div>
+        <p>Cuando comenzamos un proyecto, solemos enfocarnos en la escalabilidad, usabilidad y seguridad. Sin embargo, a medida que la aplicación crece, podemos observar una disminución en su velocidad y rendimiento. Es en este punto cuando reconocemos la necesidad de optimización.</p>
+        <p>En este artículo presentaremos algunas de las técnicas más comunes para optimizar el código, que se pueden implementar en cualquier aplicación. También mostraremos ejemplos de código en JavaScript y ReactJS. Algunas de las técnicas que cubriremos son:</p>
+        <ul>
+            <li>Debouncing</li>
+            <li>Throttling</li>
+            <li>Memoization</li>
+            <li>Pure Components</li>
+            <li>Lazy Loading</li>
+            <li>Virtualización (o Windowing)</li>
+            <li>Error Boundaries</li>
+            <li>Funciones en línea</li>
+        </ul>
+    </article>
+
+    <article>
+        <div>
+           <H2>Debouncing</H2> 
+        </div>
+        <p>
+            Debouncing is a programming technique used to optimize the processing of functions that consume a lot of execution time.
+            This technique involves preventing those functions from executing repeatedly without control, which helps improve the performance of our applications.
+            In the case of applications that must respond to certain user actions, we often cannot avoid certain functions from being executed repeatedly.
+            For example, events such as mousemove or window.resize can trigger hundreds of calls to these functions with a simple mouse movement or browser window resizing.
+            It is in these cases that we resort to techniques like Debouncing to limit these calls and solve performance issues
+             that may be caused by such events or functions.
+        </p>
+        <pre>
+            <code>
+            <script>
+            function debounce(func, wait) {
+                let timeout;
+                return function executedFunction(...args) {
+                    const later = () => {
+                        clearTimeout(timeout);
+                        func(...args);
+                    };
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                };
+            }
+        </script>
+        </code></pre>
+    </article>
+
+    <section class="enlaces">
+        <div class="enlace">
+            <a href="">AI</a>
+        </div>
+        <div class="enlace">
+            <a href="">JavaScript</a>
+        </div>
+        <div class="enlace">
+            <a href="">Optimization</a>
+        </div>
+        <div class="enlace">
+            <a href="">Performance</a>
+        </div>
+        <div class="enlace">
+            <a href="">JavaScript Tips</a>
+        </div>
+    </div>
+    <div class="enlace">
+        <a href="">React</a>
+    </div>
+    </section>
+</body>
+</html>
